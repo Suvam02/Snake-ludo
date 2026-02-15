@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake & Ladder Word Quest</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>🐍 Snake & Ladder Word Quest 🪜</h1>
+      <p>Roll the auto dice, land on a word, and type its meaning. Correct: <strong>+3</strong>, Wrong: <strong>-1</strong>.</p>
+    </header>
+
+    <section class="game-layout">
+      <div class="board-wrap">
+        <div id="board" class="board"></div>
+        <svg id="overlay" class="overlay" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+        <div id="token" class="token" aria-label="player token">⭐</div>
+      </div>
+
+      <aside class="panel">
+        <div class="stats">
+          <p>Position: <span id="position">1</span></p>
+          <p>Score: <span id="score">0</span></p>
+          <p>Dice: <span id="dice">-</span></p>
+          <p>Status: <span id="status">Press Roll to start!</span></p>
+        </div>
+
+        <button id="rollBtn" class="roll-btn">🎲 Auto Roll Dice</button>
+
+        <form id="answerForm" class="quiz" autocomplete="off">
+          <h2>Word Meaning Challenge</h2>
+          <p>Cell <span id="cellNumber">1</span> word: <strong id="wordText">-</strong></p>
+          <label for="meaningInput">Type a simple meaning for young students:</label>
+          <input id="meaningInput" type="text" placeholder="Example: very big" required />
+          <button type="submit">Submit Meaning</button>
+          <p id="feedback" class="feedback"></p>
+          <p class="hint">Tip: Keep it short and simple.</p>
+        </form>
+      </aside>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
